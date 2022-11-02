@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import CountriesProvider from "./countriesContext";
+import Home from "./Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CountryDetaills from "./components/CountryDetaills";
+import Header from "./components/Header";
+import ScrollToTop from "./components/ScrollTop";
 
 function App() {
+  const [ShowDetaills, setShowDetaills] = useState(false);
+  const [country, setCountry] = useState({});
+
+  const [ApiQuery, setApiQuery] = useState("all");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <CountriesProvider query={ApiQuery}>
+        <Header />
+        <ScrollToTop ShowDetaills={ShowDetaills} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                setShowDetaills={setShowDetaills}
+                setApiQuery={setApiQuery}
+                setCountry={setCountry}
+              />
+            }
+          />
+          <Route
+            path="/detaills"
+            element={<CountryDetaills detaills={country} />}
+          />
+        </Routes>
+      </CountriesProvider>
+    </Router>
   );
 }
 

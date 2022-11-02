@@ -1,0 +1,49 @@
+.header {
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    padding: 1rem 2rem;
+    /* add box shdow for light theme */
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.363);
+
+}
+
+
+.header__logo {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.theme-toggle span {
+    color: var(--text);
+    text-transform: capitalize;
+}
+
+/* set media screen for small devices */
+/* @media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+        width: 100% !important;
+    }
+
+    .header__logo {
+        margin-bottom: 1rem;
+    }
+
+    .theme-toggle {
+        margin-top: 1rem;
+    }
+} */

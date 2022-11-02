@@ -1,0 +1,26 @@
+.filter select {
+    outline: none;
+    border: none;
+    background: var(--bg);
+    color: var(--text);
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.filter {
+    transition: all .5s ease;
+    border: 1px solid transparent;
+    padding-inline: 1.1rem;
+    background: var(--bg);
+    font-size: var(--font-size);
+    border-radius: 5px;
+    /* add box shdow for light theme */
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.363);
+
+}
+
+.filter:hover {
+    border: 1px solid var(--text-secondary);
+}

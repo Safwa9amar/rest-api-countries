@@ -1,0 +1,70 @@
+/* get the font https: //fonts.google.com/specimen/Nunito+Sans  Weights: 300,600,800 */
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,800);
+
+:root {
+    --dark-gray: hsl(0, 0%, 52%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-blue-light: hsl(200, 15%, 8%);
+    /* Dark Mode Elements */
+    --dark-blue: hsl(207, 26%, 17%);
+    --very-dark-blue: hsl(209, 23%, 22%);
+    /* light mode Elements */
+    --very-light-gray: hsl(0, 0%, 98%);
+    --light-gray: hsl(0, 0%, 95%);
+    /* - Homepage Items: 14px - Detail Page: 16px */
+    --font-size: 14px;
+    --font-size-detail: 16px;
+    --padding-inline-main: 5rem;
+    --padding-block-main: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    background: var(--primary-bg);
+    color: var(--text);
+    font-size: var(--font-size);
+    transition: all .3s ease;
+}
+
+p {
+    font-weight: 800;
+}
+
+p span {
+    font-weight: 600;
+
+}
+
+.hidden {
+    display: none !important;
+}
+
+.zero {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    z-index: -111111;
+}
+
+.zero>* {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
+    z-index: -111111;
+}
+
+/* set media screen for small devices */
+@media screen and (max-width: 768px) {
+    :root {
+        --padding-inline-main: 0;
+        --padding-block-main: .5rem;
+    }
+}

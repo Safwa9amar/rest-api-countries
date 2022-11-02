@@ -1,0 +1,82 @@
+:root {
+    --timing: 0;
+}
+
+
+.country {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    border-radius: 5px;
+    background: var(--primary-bg);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+    opacity: 0;
+    width: 90%;
+    text-decoration: none;
+}
+
+.country:visited,
+.country:link {
+    color: var(--primary-text);
+    font-weight: bold;
+}
+
+.country__flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.country__flag {
+    width: 100%;
+    height: 200px;
+    /* margin-bottom: 10px; */
+}
+
+.country__info {
+    padding: 15px 10px;
+    font-size: var(--font-size);
+
+}
+
+.country__info__name {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.country__info__population {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.country__info__region {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.country__info__capital {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.country__info span {
+    color: var(--text-secondary);
+    margin-inline: .3rem;
+
+}
+
+/* fade in animation */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
